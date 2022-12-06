@@ -1,0 +1,27 @@
+html 
+    head 
+        title Gallery 
+    body 
+        include bootstrap.html
+        include header.pug
+
+        -const array = ["https://images.unsplash.com/photo-1661961112835-ca6f5811d2af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80", "https://images.unsplash.com/photo-1669147528483-5b5b4493cbe3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80", "https://cdn.pixabay.com/photo/2022/11/19/15/50/holly-7602422_960_720.jpg", "https://cdn.pixabay.com/photo/2022/11/12/16/37/pine-7587392_960_720.jpg", "https://cdn.pixabay.com/photo/2022/11/02/06/42/toadstool-7564167_960_720.jpg", "https://cdn.pixabay.com/photo/2022/11/17/23/32/plant-7599090_960_720.jpg", "https://cdn.pixabay.com/photo/2022/11/17/21/15/great-spotted-woodpecker-7598894_960_720.jpg", "https://cdn.pixabay.com/photo/2022/11/07/18/29/bird-7576994_960_720.jpg"];
+        .container
+            each i in array
+                .row
+                    .col-sm-6
+                        .card(style='width: 18rem;')
+                        img.card-img-top(src=i alt='...')
+                        .card-body
+                            h5.card-title Card title
+                            p.card-text
+                            | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                            a.btn.btn-primary(href='#') Go somewhere
+                    .col-sm-6
+                        .card(style='width: 18rem;')
+                        img.card-img-top(src=i alt='...')
+                        .card-body
+                            h5.card-title Card title
+                            p.card-text
+                            | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                            a.btn.btn-primary(href='#') Go somewhere
